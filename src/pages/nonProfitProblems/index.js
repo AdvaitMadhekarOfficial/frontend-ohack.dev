@@ -82,7 +82,6 @@ export default function Opportunities(){
         handleSnackbarOpen();
         setValues(defaultValues);
     }
-
     if( user == null )
     {
         loginCallToAction = 
@@ -127,11 +126,55 @@ export default function Opportunities(){
         )
     }
     else{
+        console.log("Reached!");
         return(
 
             //TODO: add Form Here
-            <h1> Form </h1>
-        )
+            <div>
+                <h2> Problems </h2>
+                <form>
+                    <label>NonProfit Name: </label>
+                    <input
+                        type="text"
+                        required
+                    />
+                    <label>Contact First Name: </label>
+                    <input
+                        type="text"
+                        required
+                    />
+                    <label>Contact Last Name: </label>
+                    <input
+                        type="text"
+                        required
+                    />
+                    <label>Contact Email: </label>
+                    <input
+                        type="text"
+                        required
+                    />
+                    <label>Contact Phone Number: </label>
+                    <input
+                        type="text"
+                    />
+                    <label>Organization Type: </label>
+                    <h4> What does your organization focus on? </h4>
+                    <select>
+                        <option value="Science"> Science </option>
+                        <option value="Science"> Education </option>
+                        <option value="Science"> Helping the Underprivilaged </option>
+                        <option value="Science"> Science </option>
+                        <option value="Science"> Science </option>
+
+                    </select>
+                    <label>The Problem: </label>
+                    <textarea
+                        required
+                    >
+                    </textarea>
+                </form>
+            </div>
+        );
     }
 
 }
